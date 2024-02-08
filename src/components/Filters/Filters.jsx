@@ -1,9 +1,13 @@
-
+import FilterCharacter from "./FilterCharacter";
+import FilterHouse from "./FilterHouse";
 
 function Filters() {
   return (
-    <div>Filters</div>
-  )
+    <form>
+     <FilterCharacter/>
+     <FilterHouse/>
+    </form>
+  );
 }
 
-export default Filters
+export default Filters;

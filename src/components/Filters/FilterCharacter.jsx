@@ -1,9 +1,10 @@
-
-
 function FilterCharacter() {
   return (
-    <div>FilterCharacter</div>
-  )
+    <>
+      <label htmlFor="adiós">Busca por personaje <br /> </label>
+      <input type="text" id="adiós" /> <br />
+    </>
+  );
 }
 
-export default FilterCharacter
+export default FilterCharacter;
