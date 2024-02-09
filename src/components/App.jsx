@@ -1,33 +1,50 @@
 import "../styles/_App.scss";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, matchPath, useLocation } from "react-router-dom";
 import dataResult from "../services/data";
 import { useEffect, useState } from "react";
 import getDataAppi from "../services/data";
 import Filters from "./Filters/Filters";
 import HomePage from "../components/HomePage/HomePage";
+import Detail from "./Detail/Detail";
+import Header from "./Header/Header";
 
 function App() {
   const [allData, setAllData] = useState([]);
   const [filterCharacter, setFilterCharacter] = useState("");
+  const [filterGender, setFilterGender] = useState("");
   const [filterHouse, setFilterHouse] = useState("Gryffindor");
-  let notFoundCharacter =  ''
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true)
     getDataAppi(filterHouse).then((dataResult) => {
       setAllData(dataResult);
+      setLoading(false)
     });
   }, [filterHouse]);
 
-  let foundByFilters = allData.filter((character) => character.name.toLowerCase().includes(filterCharacter.toLowerCase()) 
-  );
-  if(foundByFilters.length === 0){
-    return notFoundCharacter = 'Ups, no hemos encontrado el personaje que deseas, prueba con otro'
-  }
+  const foundByFilters = allData
+    .filter((character) =>
+      character.name.toLowerCase().includes(filterCharacter.toLowerCase())
+    )
+ /*    .filter((eachGender) => eachGender.gender === filterGender); */
+
+  const { pathname } = useLocation();
+  const routeData = matchPath("/character/:idUser", pathname);
+  const idUser = routeData !== null ? routeData.params.idUser : null;
+  const characterData = allData.find((character) => character.id === idUser);
+
+  const handleClearVars = () => {
+    setFilterCharacter("");
+    setFilterGender("");
+    setFilterHouse("Gryffindor");
+  };
+
 
 
   return (
     <div>
-      <h1>HARRY POTTER</h1>
+     <Header/>
       <Routes>
         <Route
           path="/"
@@ -36,12 +53,20 @@ function App() {
               allData={allData}
               filterCharacter={setFilterCharacter}
               foundByFilters={foundByFilters}
-              notFoundCharacter={notFoundCharacter}
               filterVar={filterCharacter}
-              setFilterHouse={setFilterHouse} 
+              setFilterHouse={setFilterHouse}
               filterHouse={filterHouse}
+              handleClearVars={handleClearVars}
+              setFilterGender={setFilterGender}
+              filterGender={filterGender}
+              loading={loading}
             />
           }
+        />
+
+        <Route
+          path="/character/:idUser"
+          element={<Detail characterData={characterData} />}
         />
       </Routes>
     </div>

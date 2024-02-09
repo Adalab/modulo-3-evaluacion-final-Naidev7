@@ -5,6 +5,7 @@ function getDataAppi (value){
         const dataResult = data.map((person)=>{
             return{
                 name: person.name,
+                id: person.id,
                 gender: person.gender,
                 image: person.image,
                 species: person.species,
@@ -12,7 +13,7 @@ function getDataAppi (value){
                 house: person.house
             }
         })
-        console.log('dataResult: ', dataResult)
+        console.log(dataResult)
        return dataResult
     })
 }

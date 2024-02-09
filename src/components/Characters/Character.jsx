@@ -1,13 +1,18 @@
+import placeholderImg from "../../images/placeholder.png";
 
-
-function Character( { allData } ) {
+function Character({ allData }) {
   return (
-    <div>
-      <img src={allData.image} alt={allData.name} />
-      <h4>{allData.name}</h4>
-      <h5>{allData.species}</h5>
+    <div className="book">
+      <h4 className="name">{allData.name}</h4> 
+      <h5 className="specie">{allData.species}</h5>
+      <div className="cover">
+        <img
+          src={allData.image === "" ? placeholderImg : allData.image}
+          alt={allData.name} className="characterImg"
+        />
+      </div>
     </div>
-  )
+  );
 }
 
-export default Character
+export default Character;
