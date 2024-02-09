@@ -1,11 +1,12 @@
 import ListCharacters from "../Characters/ListCharacters";
 import Filters from "../Filters/Filters";
 
-function HomePage({allData}) {
+function HomePage({allData, filterCharacter, foundByFilters, filterVar, setFilterHouse, filterHouse, notFoundCharacter }) {
   return (
     <>
-    <Filters/>
-    <ListCharacters allData={allData}/>
+    <Filters filterCharacter={filterCharacter} filterVar={filterVar} setFilterHouse={setFilterHouse} filterHouse={filterHouse}  notFoundCharacter={notFoundCharacter}/>
+    
+    <ListCharacters allData={foundByFilters}/>
     </>
   )
 }

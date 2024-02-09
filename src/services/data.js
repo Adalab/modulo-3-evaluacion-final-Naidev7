@@ -1,5 +1,5 @@
-function getDataAppi (){
- return  fetch('https://hp-api.onrender.com/api/characters/house/gryffindor')
+function getDataAppi (value){
+ return  fetch(`https://hp-api.onrender.com/api/characters/house/${value}`)
     .then((response)=> response.json())
     .then((data)=>{
         const dataResult = data.map((person)=>{

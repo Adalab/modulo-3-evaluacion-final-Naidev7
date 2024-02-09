@@ -1,11 +1,17 @@
 import FilterCharacter from "./FilterCharacter";
 import FilterHouse from "./FilterHouse";
 
-function Filters() {
+function Filters({filterCharacter, filterVar, setFilterHouse, filterHouse, notFoundCharacter }) {
+  const handleForm = (event)=>{
+    event.preventDefault();
+  }
   return (
-    <form>
-     <FilterCharacter/>
-     <FilterHouse/>
+    <form onSubmit={handleForm}>
+     <FilterCharacter filterCharacter={filterCharacter} filterVar={filterVar}/>
+
+     <FilterHouse setFilterHouse={setFilterHouse} filterHouse={filterHouse}/>
+
+     {notFoundCharacter}
     </form>
   );
 }

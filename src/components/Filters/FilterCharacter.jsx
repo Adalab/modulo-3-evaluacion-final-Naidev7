@@ -1,8 +1,11 @@
-function FilterCharacter() {
+function FilterCharacter({filterCharacter, filterVar }) {
+  const handleInput = (ev)=>{
+    filterCharacter(ev.target.value);
+  }
   return (
     <>
-      <label htmlFor="adiós">Busca por personaje <br /> </label>
-      <input type="text" id="adiós" /> <br />
+      <label >Busca por personaje <br /> </label>
+      <input type="text" onChange={handleInput} value={filterVar} /> <br />
     </>
   );
 }
