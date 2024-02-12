@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function FilterCharacter({filterCharacter, filterVar }) {
   const handleInput = (ev)=>{
     filterCharacter(ev.target.value);
@@ -10,4 +12,8 @@ function FilterCharacter({filterCharacter, filterVar }) {
   );
 }
 
+FilterCharacter.propTypes = {
+  filterCharacter : PropTypes.func,
+  filterVar : PropTypes.string
+}
 export default FilterCharacter;

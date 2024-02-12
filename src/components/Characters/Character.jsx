@@ -3,10 +3,22 @@ import hulfflepuf from "../../images/hulfflepuf.png";
 import griffindor from "../../images/griffindor.jpg";
 import ranvenclaw from "../../images/ranvenclaw.png";
 import slythering from "../../images/slythering.png";
+import PropTypes from "prop-types";
 
-function Character({ allData }) {
+function Character( { allData } ) {
+
+  const housesClass = allData.house === "Gryffindor"
+  ? "redColor"
+  : allData.house === "Hufflepuff"
+    ? "yellowColor"
+    : allData.house === "Slytherin"
+      ? "greenColor"
+      : allData.house === "Ravenclaw"
+        ? "blueColor"
+        : "";
+
   return (
-    <div className="book">
+    <div className={`book ${housesClass}`}>
       <h4 className="name">{allData.name}</h4>
       <h5 className="specie">{allData.species}</h5>
       <h5>{allData.patronus}</h5>
@@ -48,6 +60,10 @@ function Character({ allData }) {
       </div>
     </div>
   );
+}
+
+Character.propTypes = {
+  allData : PropTypes.object
 }
 
 export default Character;

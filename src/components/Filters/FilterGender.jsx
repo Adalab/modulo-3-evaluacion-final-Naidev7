@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function FilterGender({ setFilterGender, filterGender }) {
   const handleGender = (event) => {
     setFilterGender(event.target.value);
@@ -27,5 +29,6 @@ function FilterGender({ setFilterGender, filterGender }) {
     </div>
   );
 }
+
 
 export default FilterGender;

@@ -16,7 +16,6 @@ function getDataAppi (value){
                 patronus: person.patronus
             }
         })
-        console.log(dataResult)
        return dataResult
     })
 }

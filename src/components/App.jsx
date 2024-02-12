@@ -30,7 +30,9 @@ function App() {
     .filter((character) =>
       character.name.toLowerCase().includes(filterCharacter.toLowerCase())
     )
+    .sort((a, b) => a.name.localeCompare(b.name))
     .filter((eachGender) => filterGender === "All" || eachGender.gender === filterGender);
+  
 
 
   const { pathname } = useLocation();
@@ -38,11 +40,9 @@ function App() {
   const idUser = routeData !== null ? routeData.params.idUser : null;
   const characterData = allData.find((character) => character.id === idUser);
 
-
-
   const handleClearVars = () => {
     setFilterCharacter("");
-    setFilterGender("");
+    setFilterGender("All");
     setFilterHouse("Gryffindor");
   };
 
@@ -71,7 +71,7 @@ function App() {
 
         <Route
           path="/character/:idUser"
-          element={<Detail characterData={characterData} />}
+          element={<Detail characterData={characterData} routeData={routeData}/>}
         />
       </Routes>
     </div>

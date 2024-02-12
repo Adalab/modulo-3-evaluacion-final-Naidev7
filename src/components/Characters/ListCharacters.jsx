@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Character from "./Character";
+import PropTypes from "prop-types";
 
 function ListCharacters({ allData, loading }) {
   const renderCharacters = allData.map((item, i) => {
@@ -25,6 +26,11 @@ function ListCharacters({ allData, loading }) {
       )}
     </section>
   );
+}
+
+ListCharacters.propTypes = {
+  allData : PropTypes.array,
+  loading : PropTypes. any
 }
 
 export default ListCharacters;

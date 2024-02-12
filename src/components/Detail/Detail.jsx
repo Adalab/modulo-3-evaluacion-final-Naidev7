@@ -1,32 +1,37 @@
 import { Link } from "react-router-dom";
-import HomePage from "../HomePage/HomePage";
+import PropTypes from "prop-types";
 
-
-
-
-function Detail( { characterData  } ) {
+function Detail( { characterData, routeData  } ) {
 
 
   return (
     <>
       <Link to="/">
-        <button >Volver</button>
+        <button className="backBtn" >Inicio</button>
       </Link>
-      <section >
+      <section className="detailCard" >
         {characterData !== undefined ? 
       <>
-      <h2 >{characterData.name}</h2>
-        <img src={characterData.image} alt={characterData.name} />
+        <img className="imgDetail" src={characterData.image} alt={characterData.name} />
+        <div className="textDetail">
+        <h1 >{characterData.name}</h1>
         <h4>Estatus: {characterData.alive ? "💖" : "💀"}</h4>
         <h4>Especie: {characterData.species}</h4>
         <h4>Genero: {characterData.gender}</h4>
         <h4>Casa: {characterData.house}</h4>
+        <h4>Link para compartir:</h4>
+        <a href="#"> {routeData.params.idUser}</a>
+        </div>
       </>
       : null
       }
       </section>
     </>
   );
+}
+
+Detail.propTypes = {
+  characterData : PropTypes.object
 }
 
 export default Detail;
