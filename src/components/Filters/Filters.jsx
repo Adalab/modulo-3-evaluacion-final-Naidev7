@@ -15,17 +15,18 @@ function Filters({filterCharacter, filterVar, setFilterHouse, filterHouse, handl
 
   return (
   <>
-    <form onSubmit={handleForm}>
+    <form onSubmit={handleForm} className="formFilters">
      <FilterCharacter filterCharacter={filterCharacter} filterVar={filterVar}/>
 
      <FilterHouse setFilterHouse={setFilterHouse} filterHouse={filterHouse}/>
 
     <FilterGender setFilterGender={setFilterGender} filterGender={filterGender}/>
 
-    </form>
-    <button onClick={handleReset}> 
+    <button onClick={handleReset} className="resetBtn"> 
     <i className="fa-sharp fa-solid fa-trash fa-flip-horizontal"></i>
     </button>
+    </form>
+ 
   </>
   );
 }

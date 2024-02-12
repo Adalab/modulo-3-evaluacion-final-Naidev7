@@ -1,0 +1,52 @@
+.formFilters {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 15px;
+  gap: 10px;
+  width: 50vw;
+  background-color: white;
+  border-radius: 15px;
+  -webkit-box-shadow: -10px -2px 50px -7px ;
+  -moz-box-shadow: -10px -2px 50px -7px rgba(57, 132, 222, 1);
+  box-shadow: -10px -2px 50px -7px rgba(57, 132, 222, 1);
+  top: 260px;
+  left: 50%;
+  transform: translateX(-25vw) ;
+  text-align: center;
+  color: rgb(122, 106, 19);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.1rem;
+
+
+  .inputSearch {
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 2px solid rgba(106, 120, 137, 0.599);
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    color: rgb(65, 64, 64);
+  }
+  .inputGender{
+    margin: 15px;
+    cursor: pointer;
+    font-size:16px;
+  }
+  .resetBtn{
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    width: 80px;
+    height: 30px;
+    align-self: center;
+    background-color:  rgba(122, 106, 19, 0.677);
+    box-shadow:1px 1px 3px rgba(57, 132, 222, 1) ;
+    color:white ;
+  }
+  .resetBtn:hover{
+    transform: scale(1.1);
+  }
+}

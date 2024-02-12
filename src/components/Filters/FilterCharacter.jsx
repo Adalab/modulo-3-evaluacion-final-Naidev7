@@ -3,10 +3,10 @@ function FilterCharacter({filterCharacter, filterVar }) {
     filterCharacter(ev.target.value);
   }
   return (
-    <>
-      <label >Busca por personaje <br /> </label>
-      <input type="text" onChange={handleInput} value={filterVar} /> <br />
-    </>
+   <div className="name">
+    <label className="searchName" >Busca por personaje ⚯ ͛</label> <br /> 
+      <input type="text" onChange={handleInput} value={filterVar} placeholder="Neville Longbottom" className="inputSearch" /> 
+   </div>
   );
 }
 

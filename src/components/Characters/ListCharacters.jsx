@@ -5,7 +5,7 @@ function ListCharacters({ allData, loading }) {
   const renderCharacters = allData.map((item, i) => {
     return (
       <article key={i}>
-        <Link to={`/character/${item.id}`}>
+        <Link to={`/character/${item.id}`} className="links">
           <Character allData={item} />
         </Link>
       </article>

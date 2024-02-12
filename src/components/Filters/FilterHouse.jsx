@@ -6,15 +6,15 @@ function FilterHouse( { setFilterHouse, filterHouse } ) {
   }
 
   return (
-   <>
-    <label htmlFor="select">Selecciona por casa <br /></label>
-    <select id="select" onChange={handleSelectHouse} value={filterHouse}>
-      <option value="Gryffindor">Godric Gryffindor</option>
-      <option value="Slytherin">Salazar Slytherin</option>
-      <option value="Hufflepuff">Helga Hufflepuff</option>
-      <option value="Ravenclaw">Rowena Ravenclaw</option>
+   <div>
+     <label htmlFor="select" className="searchName">Selecciona por casa<br /></label>
+    <select id="select" onChange={handleSelectHouse} value={filterHouse} className="inputSearch">
+      <option value="Gryffindor">Godric Gryffindor 🦁</option>
+      <option value="Slytherin">Salazar Slytherin 🐍</option>
+      <option value="Hufflepuff">Helga Hufflepuff 🦡</option>
+      <option value="Ravenclaw">Rowena Ravenclaw 🦅</option>
     </select>
-   </>
+   </div>
   )
 }
 

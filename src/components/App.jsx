@@ -8,12 +8,15 @@ import HomePage from "../components/HomePage/HomePage";
 import Detail from "./Detail/Detail";
 import Header from "./Header/Header";
 
+
+
 function App() {
   const [allData, setAllData] = useState([]);
   const [filterCharacter, setFilterCharacter] = useState("");
-  const [filterGender, setFilterGender] = useState("");
+  const [filterGender, setFilterGender] = useState("All");
   const [filterHouse, setFilterHouse] = useState("Gryffindor");
   const [loading, setLoading] = useState(false);
+
 
   useEffect(() => {
     setLoading(true)
@@ -27,12 +30,15 @@ function App() {
     .filter((character) =>
       character.name.toLowerCase().includes(filterCharacter.toLowerCase())
     )
- /*    .filter((eachGender) => eachGender.gender === filterGender); */
+    .filter((eachGender) => filterGender === "All" || eachGender.gender === filterGender);
+
 
   const { pathname } = useLocation();
   const routeData = matchPath("/character/:idUser", pathname);
   const idUser = routeData !== null ? routeData.params.idUser : null;
   const characterData = allData.find((character) => character.id === idUser);
+
+
 
   const handleClearVars = () => {
     setFilterCharacter("");
@@ -41,9 +47,8 @@ function App() {
   };
 
 
-
   return (
-    <div>
+    <div className="body">
      <Header/>
       <Routes>
         <Route

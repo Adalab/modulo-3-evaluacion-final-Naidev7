@@ -10,7 +10,10 @@ function getDataAppi (value){
                 image: person.image,
                 species: person.species,
                 alive: person.alive,
-                house: person.house
+                house: person.house,
+                actor: person.actor,
+                alternateNames: person.alternate_names,
+                patronus: person.patronus
             }
         })
         console.log(dataResult)
