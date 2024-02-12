@@ -6,7 +6,7 @@ function FilterCharacter({filterCharacter, filterVar }) {
   }
   return (
    <div className="name">
-    <label className="searchName" >Busca por personaje ⚯ ͛</label> <br /> 
+    <label className="searchName" >Busca por personaje </label> <br /> 
       <input type="text" onChange={handleInput} value={filterVar} placeholder="Neville Longbottom" className="inputSearch" /> 
    </div>
   );

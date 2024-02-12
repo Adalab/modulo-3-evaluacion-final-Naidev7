@@ -1,11 +1,20 @@
+.body{
+    background-color: rgba(57, 131, 222, 0.083);
+    height: 100%;
+    width: 100vw;
+   }
+
 .header{
     background-image: url("/src/images/background\ potter\'s\ home.gif");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     border: 1px transparent;
-    box-shadow: 8px 8px 8px 8px ;
-    height: 40vh;
+    -webkit-box-shadow: -10px -2px 50px -7px ;
+    -moz-box-shadow: -10px -2px 50px -7px rgba(57, 131, 222, 0.677);
+    box-shadow: -10px -2px 50px -7px rgba(57, 131, 222, 0.804);
+    height: 40vh; 
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;

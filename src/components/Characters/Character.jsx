@@ -1,8 +1,8 @@
-import placeholderImg from "../../images/placeholder.png";
-import hulfflepuf from "../../images/hulfflepuf.png";
+import holder from "../../images/holder.jpg";
+import hulfflepuf from "../../images/hulfflepufH.jpg";
 import griffindor from "../../images/griffindor.jpg";
-import ranvenclaw from "../../images/ranvenclaw.png";
-import slythering from "../../images/slythering.png";
+import ranvenclaw from "../../images/ravenclaw.webp";
+import slythering from "../../images/slythering.webp";
 import PropTypes from "prop-types";
 
 function Character( { allData } ) {
@@ -53,7 +53,7 @@ function Character( { allData } ) {
      
       <div className="cover">
         <img
-          src={allData.image === "" ? placeholderImg : allData.image}
+          src={allData.image === "" ? holder : allData.image}
           alt={allData.name}
           className="characterImg"
         />

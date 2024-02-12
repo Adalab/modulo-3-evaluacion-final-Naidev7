@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import holder from "../../images/holder.jpg";
 import PropTypes from "prop-types";
 
 function Detail( { characterData, routeData  } ) {
@@ -12,7 +13,7 @@ function Detail( { characterData, routeData  } ) {
       <section className="detailCard" >
         {characterData !== undefined ? 
       <>
-        <img className="imgDetail" src={characterData.image} alt={characterData.name} />
+        <img className="imgDetail" src={characterData.image === "" ? holder : characterData.image } alt={characterData.name} />
         <div className="textDetail">
         <h1 >{characterData.name}</h1>
         <h4>Estatus: {characterData.alive ? "💖" : "💀"}</h4>
