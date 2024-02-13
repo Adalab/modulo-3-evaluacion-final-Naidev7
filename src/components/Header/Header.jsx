@@ -4,7 +4,7 @@ import harryTitle from "../../images/title.png"
 function Header() {
   return (
    <header className="header">
-      <img src={harryTitle} alt="title" />
+      <img className="titleImg" src={harryTitle} alt="title" />
    </header>
   )
 }

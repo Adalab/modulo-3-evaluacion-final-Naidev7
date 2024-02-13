@@ -1,8 +1,3 @@
-.body{
-    background-color: rgba(57, 131, 222, 0.083);
-    height: 100%;
-    width: 100vw;
-   }
 
 .header{
     background-image: url("/src/images/background\ potter\'s\ home.gif");
@@ -19,4 +14,13 @@
     align-items: center;
     justify-content: center;
     
+}
+
+@media (max-width:320px) {
+    .header{
+        max-width: 320px;
+    }
+    .titleImg{
+        max-width: 300px;
+    }
 }

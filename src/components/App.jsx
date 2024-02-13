@@ -39,6 +39,7 @@ function App() {
   const routeData = matchPath("/character/:idUser", pathname);
   const idUser = routeData !== null ? routeData.params.idUser : null;
   const characterData = allData.find((character) => character.id === idUser);
+  console.log(routeData)
 
   const handleClearVars = () => {
     setFilterCharacter("");
