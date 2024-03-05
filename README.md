@@ -2,7 +2,7 @@
 # Harry Potter SPA Project
 This project is a Single Page Application (SPA) developed as part of an assessment of my skills in React. It is centered around the Harry Potter universe and has been designed to showcase my understanding and proficiency in various key React concepts, including components, props, liftings, React Router DOM, various React hooks, and the use of SASS for styling the application.
 
-![Uploading harry.png…]()
+<img width="960" alt="harry" src="https://github.com/Adalab/modulo-3-evaluacion-final-Naidev7/assets/150022253/bd0ad4a8-79b4-4f6c-a1f6-2366e7682880">
 
 
 ## Main Features
