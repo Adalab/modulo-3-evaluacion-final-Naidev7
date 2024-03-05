@@ -2,6 +2,9 @@
 # Harry Potter SPA Project
 This project is a Single Page Application (SPA) developed as part of an assessment of my skills in React. It is centered around the Harry Potter universe and has been designed to showcase my understanding and proficiency in various key React concepts, including components, props, liftings, React Router DOM, various React hooks, and the use of SASS for styling the application.
 
+![Uploading harry.png…]()
+
+
 ## Main Features
 - Filtering: Users can filter Harry Potter characters by name, house, and gender.
 - Sorting: Search results are presented in alphabetical order.
