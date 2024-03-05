@@ -1,46 +1,34 @@
-# Proyecto de SPA sobre Harry Potter
 
-Este proyecto es una aplicación de página única (SPA) desarrollada como parte de una evaluación de mis conocimientos en React. Está centrada en el universo de Harry Potter y ha sido diseñada para demostrar mi comprensión y habilidades en varios conceptos clave de React, incluyendo componentes, props, liftings, React Router DOM, varios hooks de React y el uso de SASS para estilizar la aplicación.
+# Harry Potter SPA Project
+This project is a Single Page Application (SPA) developed as part of an assessment of my skills in React. It is centered around the Harry Potter universe and has been designed to showcase my understanding and proficiency in various key React concepts, including components, props, liftings, React Router DOM, various React hooks, and the use of SASS for styling the application.
 
-## Funcionalidades Principales
+## Main Features
+- Filtering: Users can filter Harry Potter characters by name, house, and gender.
+- Sorting: Search results are presented in alphabetical order.
+- Intuitive Interface: The user interface is easy to use and allows for smooth navigation.
+## Technologies Used
+- React: The application is built using React, a JavaScript framework.
+- React Router DOM: To manage application routes and navigation between different views.
+- SASS: Used to style the user interface and enhance the visual presentation of the application.
+## How to Use
+1. Clone the Repository: Clone this repository to your local machine using the following command:
 
--   **Filtrado**: Los usuarios pueden filtrar los personajes de Harry Potter por nombre, casa y género.
--   **Ordenación**: Los resultados de la búsqueda se presentan en orden alfabético.
--   **Interfaz Intuitiva**: La interfaz de usuario es fácil de usar y permite una navegación fluida.
+```bash
+git clone https://github.com/your-username/repository-name.git
+```
 
-## Tecnologías Utilizadas
+2. Install Dependencies: Navigate to the project directory and run the following command to install all necessary dependencies:
+`
+```bash
+npm install
+```
 
--   **React**: La aplicación está construida utilizando React, un marco de trabajo de JavaScript.
--   **React Router DOM**: Para gestionar las rutas de la aplicación y la navegación entre diferentes vistas.
--   **SASS**: Se utiliza para estilizar la interfaz de usuario y mejorar la presentación visual de la aplicación.
+3. Start the Application: Once all dependencies have been successfully installed, you can start the application by running:
 
-## Cómo Usarlo
+```bash
+npm start
+```
 
-1.  **Clonar el Repositorio**: Clona este repositorio en tu máquina local utilizando el siguiente comando:
-    
-    bashCopy code
-    
-    `git clone https://github.com/tu-usuario/nombre-del-repositorio.git` 
-    
-2.  **Instalar Dependencias**: Navega hasta el directorio del proyecto y ejecuta el siguiente comando para instalar todas las dependencias necesarias:
-    
-    Copy code
-    
-    `npm install` 
-    
-3.  **Iniciar la Aplicación**: Una vez que todas las dependencias se han instalado correctamente, puedes iniciar la aplicación ejecutando:
-    
-    sqlCopy code
-    
-    `npm start` 
-    
-4.  **Usar la Aplicación**: Abre tu navegador web y ve a `http://localhost:3000` para acceder a la aplicación. Desde allí, puedes explorar los diferentes personajes de Harry Potter, aplicar filtros y disfrutar de la experiencia.
-    
+4. Use the Application: Open your web browser and go to http://localhost:3000 to access the application. From there, you can explore the different Harry Potter characters, apply filters, and enjoy the experience.
 
-## Contribuciones
-
-¡Las contribuciones son bienvenidas! Si tienes sugerencias para mejorar este proyecto, por favor crea un issue o envía una solicitud de pull request.
-
-----------
-
-Este proyecto es una demostración de mi comprensión y habilidades en React y otras tecnologías asociadas. ¡Espero que lo disfrutes tanto como yo disfruté desarrollándolo! 🧙🏻‍♂️✨
+# I hope you enjoy it as much as I enjoyed developing it! 🧙🏻‍♂️✨
