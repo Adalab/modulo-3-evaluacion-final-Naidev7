@@ -20,8 +20,6 @@ function Detail( { characterData, routeData  } ) {
         <h4>Especie: {characterData.species}</h4>
         <h4>Genero: {characterData.gender}</h4>
         <h4>Casa: {characterData.house}</h4>
-        <h4>Link para compartir:</h4>
-        <a href="#"> {routeData.params.idUser}</a>
         </div>
       </>
       : null
